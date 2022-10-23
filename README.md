@@ -13,3 +13,25 @@ If a player collides with their opponent's trail...
 A "game over" message is displayed in the middle of the screen.
 The cycles turn white.
 Players keep moving and turning but don't run into each other.
+
+Getting Started
+
+Make sure you have Python 3.8.0 or newer and Raylib Python CFFI 3.7 installed and running on your machine. Y
+
+## Project Structure
+---
+The project files and folders are organized as follows:
++--root (project root folder)  
++--cycle (source code for game) 
++-- game (specific game classes) 
++-- main.py (entry point for program) 
++-- README.md (general info)
+
+## Required Technologies
+---
+* Python 3.8.0
+* Raylib Python CFFI 3.7
+
+Authors
+---
+adaobi okudo - oku22001@byui.edu
