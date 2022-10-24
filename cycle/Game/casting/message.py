@@ -1,27 +1,22 @@
 from game.casting.actor import Actor
 
-
-class Score(Actor):
+class Message(Actor):
     """
-    A record of points made or lost. 
+    A message that provides information to the cyclists
     
-    The responsibility of Score is to keep track of the points the player has earned by eating food.
-    It contains methods for adding and getting points. Client should use get_text() to get a string 
-    representation of the points earned.
-
+    The responsibility of message is to contain a message for the user and where it is to be printed on the screen.
     Attributes:
-        _points (int): The points earned in the game.
+        Inherited from Actor:
+            _text (string): contains the message text to be displayed
+            _position (Point): The screen coordinates
     """
-    def __init__(self):
-        super().__init__()
-        self._points = 0
-        self.add_points(0)
 
-    def add_points(self, points):
-        """Adds the given points to the score's total points.
+    def __init__(self):
+        "Constructs a new actor called message"
+        super().__init__()
+
         
-        Args:
-            points (int): The points to add.
-        """
-        self._points += points
-        self.set_text(f"Score: {self._points}")
+    def set_position_and_text(self, position, text):
+        "allows specification of where and what to put on the screen"
+        self._position = position
+        self._text = text
